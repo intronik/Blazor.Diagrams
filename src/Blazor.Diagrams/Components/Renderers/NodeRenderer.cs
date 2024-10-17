@@ -133,7 +133,7 @@ public class NodeRenderer : ComponentBase, IDisposable
         {
             _becameVisible = false;
 
-            if (!Node.ControlledSize)
+            if (!Node.ControlledSize && Node.Visible)
             {
                 await JsRuntime.ObserveResizes(_element, _reference!);
             }
